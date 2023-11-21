@@ -1,9 +1,11 @@
 Symfony Docker Environment 
+ 
 This repository contains a Dockerized Symfony environment for easy setup and development. 
 
 
 
-Prerequisites
+Prerequisites: 
+
 Make sure you have the following installed:
 
 Docker 
