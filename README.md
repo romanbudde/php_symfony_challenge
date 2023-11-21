@@ -14,11 +14,14 @@ Getting Started
 2. Navigate to the project directory.
 
  
-Running the Application 
-Setting Up the Environment
+Running the Application & Setting Up the Environment 
+
 Run the following command to build the necessary Docker containers: 
+ 
 docker compose build 
+ 
 And then, run: 
+ 
 docker compose up 
  
   
