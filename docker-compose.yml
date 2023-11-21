@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  web:
+    container_name: scraper_web
+    build:
+      context: ./docker/web/.
+    volumes:
+      - ./AaxisTest:/var/www/html
+      - ./docker/web/apache/virtualhost.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./docker/web/php/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "80:80"
+      
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+        POSTGRES_PASSWORD: 123456
+    volumes:
+        - .docker/pgdata:/var/lib/postgresql/data
+        - ./scripts/db:/docker-entrypoint-initdb.d
+        
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
