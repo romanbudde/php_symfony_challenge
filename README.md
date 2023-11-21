@@ -29,7 +29,8 @@ The database is accessible at localhost:8080 (thanks to the adminer container), 
  
 Should the database not be displaying any data, attach to the web container's console and make sure the database is created and the schema is updated, running: 
 
-php/console doctrine:database:create 
+php/console doctrine:database:create  
+
 php/console doctrine:schema:update 
  
  
